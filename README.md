@@ -27,10 +27,10 @@ The parts I care about are not the agents, they are the guardrails:
   land in one database, because an automation you cannot reconstruct after the fact is not
   an automation, it is a rumour.
 
-Six months in, from its own operational database: **124 unattended overnight executions,
-89.5% completing without failure**, 740 of 803 overnight steps succeeded, mean independent
-quality score 83.0 (n=277), 602 registered tools with a `draft → production` maturity ladder,
-38,708 audited commands.
+Six months in, from its own operational database: **124 unattended overnight executions, 95 of them
+with no failed step** — 65 ran to completion, 30 stopped cleanly at a step reserved for a human;
+740 of 803 overnight steps succeeded (92.2%), mean independent quality score 83.0 (n=277),
+602 registered tools with a `draft → production` maturity ladder, 38,708 audited commands.
 
 The repository is private. The numbers above come from its own instrumentation and I am happy
 to walk through any of them.
