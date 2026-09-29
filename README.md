@@ -23,24 +23,28 @@ The parts I care about are not the agents, they are the guardrails:
 - **Escalation paths that were actually exercised** — cross-provider fallback in two layers,
   a hang guard with early completion, Telegram alerts, and a rule against silencing errors
   that came out of a real four-month telemetry outage nobody noticed.
+- **Every check has to be able to fail** — each step carries a `validate` that must fail
+  against the baseline tree. If it already passes before the work runs, it proves nothing and
+  is rejected; coverage is measured per plan and blocks queueing below threshold.
 - **Everything is auditable** — commands, executions, costs, lessons and tool provenance all
   land in one database, because an automation you cannot reconstruct after the fact is not
   an automation, it is a rumour.
 
-Six months in, from its own operational database: **124 unattended overnight executions, 95 of them
-with no failed step** — 65 ran to completion, 30 stopped cleanly at a step reserved for a human;
-740 of 803 overnight steps succeeded (92.2%), mean independent quality score 83.0 (n=277),
-602 registered tools with a `draft → production` maturity ladder, 38,708 audited commands.
+From its own operational database: 288 unattended overnight executions, 238 with no failed step
+(including 59 that stopped by design at a step reserved for a person), 24 ended in failure or
+timeout, 1,359 of 1,451 steps succeeded, mean independent quality score 87.8 (n=209 overnight runs), 783
+registered tools on a draft-to-production ladder, 91,000+ audited commands, 3,138 commits. It
+keeps running while I am away for 10-day silent Vipassana retreats with no computer access.
 
 The repository is private. The numbers above come from its own instrumentation and I am happy
 to walk through any of them.
 
 ## Before that
 
-Eleven years of business systems for real companies, mostly unglamorous and mostly load-bearing:
+Since 2012, business systems for real companies, mostly unglamorous and mostly load-bearing:
 ERP implementation and support (Tango, SAP Business One, ADempiere, OpenXava), accounting and
 tax automation, receivables and payables, and a long tail of integrations with systems that
-never had an API — which, in practice, is the same problem as integrating a partner portal.
+never had an API.
 
 Also incident response, including a ransomware case where the right answer was *not* to restore
 the most recent backup but to reconstruct the timeline of the compromise first.
