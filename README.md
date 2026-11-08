@@ -36,8 +36,17 @@ timeout, 1,359 of 1,451 steps succeeded, mean independent quality score 87.8 (n=
 registered tools on a draft-to-production ladder, 91,000+ audited commands, 3,138 commits. It
 keeps running while I am away for 10-day silent Vipassana retreats with no computer access.
 
-The repository is private. The numbers above come from its own instrumentation and I am happy
-to walk through any of them.
+Konrad's repository is private. The numbers above come from its own instrumentation and I am
+happy to walk through any of them.
+
+## Public work
+
+- **[cotenancy-guard](https://github.com/conradorebuffo/cotenancy-guard)**: a pre-commit hook and
+  Claude Code plugin for several agent sessions sharing one git working tree. It came out of
+  running Konrad that way: git tells the pre-commit hook which index it is about to commit, so a
+  commit that would take everything staged, including another session's work, can be refused
+  while that session is live. The finding, with a reproduction script, is in
+  [anthropics/claude-code#90943](https://github.com/anthropics/claude-code/issues/90943#issuecomment-6725709032).
 
 ## Before that
 
