@@ -1,6 +1,6 @@
 # Conrado Rebuffo
 
-Systems and operations engineer. For the last decade I ran the accounting, billing and
+AI automation and agent engineer. For the last decade I ran the accounting, billing and
 inventory systems that small companies depend on — the kind of work where a wrong number is
 someone's payroll. Since February 2026 I have been building the automation layer I always
 wanted for that job.
@@ -30,10 +30,10 @@ The parts I care about are not the agents, they are the guardrails:
   land in one database, because an automation you cannot reconstruct after the fact is not
   an automation, it is a rumour.
 
-From its own operational database: 288 unattended overnight executions, 238 with no failed step
-(including 59 that stopped by design at a step reserved for a person), 24 ended in failure or
-timeout, 1,359 of 1,451 steps succeeded, mean independent quality score 87.8 (n=209 overnight runs), 783
-registered tools on a draft-to-production ladder, 91,000+ audited commands, 3,138 commits. It
+From its own operational database: 383 unattended overnight executions, 320 with no failed step
+(including 66 that stopped by design at a step reserved for a person), 37 ended in failure or
+timeout, 1,751 of 1,862 steps succeeded, mean independent quality score 88.9 (n=279 overnight runs), 1,207
+registered tools on a draft-to-production ladder, 147,000+ audited commands, 5,077 commits. It
 keeps running while I am away for 10-day silent Vipassana retreats with no computer access.
 
 Konrad's repository is private. The numbers above come from its own instrumentation and I am
